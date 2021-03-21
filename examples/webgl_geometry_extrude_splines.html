@@ -98,7 +98,7 @@ const splines = {
 let parent, tubeGeometry, mesh, myscroller;
 
 const params = {
-  spline: "GrannyKnot",
+  spline: "SampleClosedSpline",
   scale: 4,
   extrusionSegments: 100,
   radiusSegments: 3,
@@ -108,7 +108,7 @@ const params = {
   cameraHelper: false
 };
 
-const material = new THREE.MeshLambertMaterial({ color: 0xff00ff });
+const material = new THREE.MeshLambertMaterial({ color: 0xFFFFFF });
 
 const wireframeMaterial = new THREE.MeshBasicMaterial({
   color: 0x000000,
@@ -289,8 +289,8 @@ function syncSplineAndScroll(myscroller) {
   myscroller.style.position = "absolute";
   myscroller.style.top = "0";
   myscroller.style.width = "100%";
-  myscroller.style.height = "" + l * 100 + "px";
-  myscroller.style.background = "rgba(255,0,0,.1)";
+  myscroller.style.height = "" + l * 10 + "px";
+  myscroller.style.background = "rgba(255,0,0,.0)";
 }
 
 function onWindowResize() {
